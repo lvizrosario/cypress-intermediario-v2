@@ -10,8 +10,9 @@ describe('Create Issue', () => {
   }
 
   beforeEach(() => {
+    cy.api_deleteAllProjects()
     cy.login()
-    cy.gui_createProject(issue.project)
+    cy.api_createProject(issue.project)
   })
 
   it('successfully', () => {
